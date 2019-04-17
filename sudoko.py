@@ -1,3 +1,4 @@
+# Author: Sidrah Noor
 # This program is written to solve a soduko puzzle
 # In the test version, ill just be putting in a puzzle myself and focus on solving the case first
 
