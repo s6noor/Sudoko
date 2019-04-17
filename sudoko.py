@@ -30,7 +30,7 @@ def get_neighborhood(matrix,index1,index2):
     cube = matrix[mrow:mrow+2,mcolumn:mcolumn+2]
     return cube
 
-# 2- identify the restrictions for all number based on a matrix
+# 2- identify the restrictions for all numbers from a matrix
 def find_restrictions(matrix):
     restricted_areas = list()
     count = 0;
@@ -51,16 +51,16 @@ def find_colnums(matrix,c):
         cols.append(matrix[i][c])
     return cols
 
-#check output of function
+#Stop to validate
 #x=find_restrictions(puzzle)
 #print(x)
 #print(get_neighborhood(puzzle,0,6))
 #print(find_colnums(puzzle,0))
 #print(find_colnums(x,0))
-#YAAAYYY IT WORKSSS
+
 
 # 4- check if a certain number can be in a certain position, if there are no restrictions
-# return false, if there is a restriction on the particular row and column return true
+# return false, if there is a restriction on the particular restriction due to row or column return true
 def check_restrictions(matrix,row,column,number):
     x = find_restrictions(matrix)
     #print(x)
@@ -92,7 +92,6 @@ def find_options(matrix,r,c):
 #Validate results
 #print(check_restrictions(puzzle,0,6,2))
 #print(find_options(puzzle,0,6))
-#HELL YAAASSS IT WORKSSS
 
 # 6- find the positions for all the empty spots in the puzzle
 def find_zeros(matrix):
