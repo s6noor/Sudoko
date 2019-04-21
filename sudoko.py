@@ -38,7 +38,6 @@ def get_neighborhood(matrix,index1,index2):
 # 2- Identify the restrictions for all number based on a matrix
 def find_restrictions(matrix):
     restricted_areas = list()
-    count = 0;
     for i in range(0,len(matrix)):
         for j in range(0,len(matrix)):
             if matrix[i][j] == 0: continue #if its 0, it just means its empty
@@ -113,8 +112,7 @@ def narrow_options(all_options,matrix,row,column):
     local_zeros.remove([num[0].index(row),num[1].index(column)])
     #now find the options for the surrounding neighborhood and make a list for
     #all the surrounding possibilities
-    for i in range(0,len(local_zeros)):
-            other_options.extend(find_options(matrix,row,column))
+    other_options.extend(find_options(matrix,row,column))
 
     # if any of the numbers in all_options are unique (i.e not present in the list of possibilities
     # for the other cells), then return that number
